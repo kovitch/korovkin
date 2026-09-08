@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mykhailo Korovkin — Technology & E-Commerce Consulting</title>
+
+    <meta
+        name="description"
+        content="Independent technology, e-commerce, AI and automation consulting for ambitious businesses."
+    >
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: #0b1220;
+            color: #fff;
+
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           LANGUAGE SWITCHER
+        ========================================================= */
+
+        .language-switcher {
+            position: fixed;
+            top: 22px;
+            right: 28px;
+
+            z-index: 1000;
+
+            display: flex;
+            gap: 3px;
+
+            padding: 4px;
+
+            background: rgba(15, 15, 15, .92);
+
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 8px;
+
+            backdrop-filter: blur(12px);
+        }
+
+        .language-switcher button {
+            border: 0;
+            background: transparent;
+
+            color: #777;
+
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .06em;
+
+            padding: 7px 8px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            transition: .2s ease;
+        }
+
+        .language-switcher button:hover {
+            color: #fff;
+        }
+
+        .language-switcher button.active {
+            background: #fff;
+            color: #111;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        header {
+            min-height: 88vh;
+
+            background:
+                radial-gradient(
+                    circle at 75% 35%,
+                    rgba(255,255,255,.055),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #050505 0%,
+                    #111 55%,
+                    #1c1c1c 100%
+                );
+
+            display: flex;
+            align-items: center;
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .header-inner {
+            width: min(1180px, calc(100% - 48px));
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: #888;
+
+            text-transform: uppercase;
+            letter-spacing: .18em;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            margin-bottom: 28px;
+        }
+
+        h1 {
+            max-width: 900px;
+
+            font-size: clamp(48px, 7vw, 88px);
+            line-height: .98;
+
+            letter-spacing: -.055em;
+
+            font-weight: 600;
+        }
+
+        h1 span {
+            color: #777;
+        }
+
+        .hero-description {
+            max-width: 680px;
+
+            margin-top: 32px;
+
+            color: #aaa;
+
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+
+            flex-wrap: wrap;
+
+            margin-top: 42px;
+        }
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding: 0 23px;
+
+            border-radius: 5px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: .2s ease;
+        }
+
+        .button-primary {
+            background: #e34b3f;
+            color: #fff;
+        }
+
+        .button-primary:hover {
+            background: #f05a4d;
+
+            transform: translateY(-1px);
+        }
+
+        .button-secondary {
+            border: 1px solid #444;
+
+            color: #ddd;
+        }
+
+        .button-secondary:hover {
+            border-color: #777;
+            color: #fff;
+        }
+
+
+        /* =========================================================
+           PROFILE PHOTO
+        ========================================================= */
+
+        .profile {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .profile img {
+            width: 190px;
+            height: 190px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            filter: saturate(.8);
+
+            border: 1px solid rgba(255,255,255,.18);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.45);
+        }
+
+
+        /* =========================================================
+           MAIN
+        ========================================================= */
+
+        main {
+            background: #102c55;
+        }
+
+        .section {
+            width: min(1180px, calc(100% - 48px));
+            margin: 0 auto;
+
+            padding: 110px 0;
+        }
+
+        .section-label {
+            color: #8ca8cb;
+
+            text-transform: uppercase;
+            letter-spacing: .16em;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            max-width: 800px;
+
+            font-size: clamp(32px, 4vw, 52px);
+
+            line-height: 1.05;
+
+            letter-spacing: -.035em;
+
+            font-weight: 500;
+        }
+
+        .section-intro {
+            max-width: 720px;
+
+            margin-top: 22px;
+
+            color: #b5c7dd;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================================================
+           EXPERTISE
+        ========================================================= */
+
+        .services {
+            margin-top: 65px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            border-top:
+                1px solid rgba(255,255,255,.16);
+        }
+
+        .service {
+            padding: 32px 30px 30px 0;
+
+            border-right:
+                1px solid rgba(255,255,255,.12);
+        }
+
+        .service:not(:first-child) {
+            padding-left: 30px;
+        }
+
+        .service:last-child {
+            border-right: 0;
+        }
+
+        .service-number {
+            color: #809cc0;
+
+            font-size: 12px;
+
+            margin-bottom: 40px;
+        }
+
+        .service h3 {
+            font-size: 21px;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            color: #a9bdd6;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           TOOLS / CAPABILITIES
+        ========================================================= */
+
+        .capabilities {
+            margin-top: 70px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top:
+                1px solid rgba(255,255,255,.14);
+        }
+
+        .capability {
+            padding: 25px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.12);
+        }
+
+        .capability:nth-child(odd) {
+            padding-right: 40px;
+
+            border-right:
+                1px solid rgba(255,255,255,.12);
+        }
+
+        .capability:nth-child(even) {
+            padding-left: 40px;
+        }
+
+        .capability h4 {
+            font-size: 15px;
+
+            font-weight: 500;
+
+            margin-bottom: 6px;
+        }
+
+        .capability p {
+            color: #91aaca;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           APPROACH
+        ========================================================= */
+
+        .approach {
+            background: #0d2548;
+        }
+
+        .approach-grid {
+            margin-top: 60px;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr .9fr;
+
+            gap: 80px;
+        }
+
+        .statement {
+            font-size: clamp(27px, 3.5vw, 43px);
+
+            line-height: 1.15;
+
+            letter-spacing: -.035em;
+        }
+
+        .details {
+            border-top:
+                1px solid rgba(255,255,255,.15);
+        }
+
+        .detail {
+            padding: 22px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.15);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .detail strong {
+            font-size: 14px;
+
+            font-weight: 500;
+        }
+
+        .detail span {
+            color: #91aaca;
+
+            font-size: 13px;
+
+            text-align: right;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            padding: 120px 0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #12396b,
+                    #102c55
+                );
+        }
+
+        .cta-inner {
+            width: min(1180px, calc(100% - 48px));
+
+            margin: 0 auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 50px;
+        }
+
+        .cta h2 {
+            max-width: 720px;
+
+            font-size: clamp(35px, 5vw, 62px);
+
+            line-height: 1.02;
+
+            letter-spacing: -.045em;
+
+            font-weight: 500;
+        }
+
+        .cta p {
+            color: #adc0d9;
+
+            margin-top: 18px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #081a32;
+
+            border-top:
+                1px solid rgba(255,255,255,.08);
+
+            padding: 30px 0;
+        }
+
+        .footer-inner {
+            width: min(1180px, calc(100% - 48px));
+
+            margin: 0 auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .footer-left {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 5px;
+        }
+
+        .footer-name {
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: .03em;
+        }
+
+        .footer-vat {
+            color: #627b99;
+
+            font-size: 11px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            gap: 26px;
+        }
+
+        .footer-links a {
+            color: #7890ad;
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            transition: .2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 800px) {
+
+            .language-switcher {
+                top: 14px;
+                right: 14px;
+            }
+
+            header {
+                min-height: 90vh;
+            }
+
+            .header-inner,
+            .section,
+            .cta-inner,
+            .footer-inner {
+                width: min(100% - 36px, 1180px);
+            }
+
+            .header-inner {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .profile {
+                justify-content: flex-start;
+            }
+
+            .profile img {
+                width: 110px;
+                height: 110px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .service,
+            .service:not(:first-child) {
+                padding: 30px 0;
+
+                border-right: 0;
+
+                border-bottom:
+                    1px solid rgba(255,255,255,.12);
+            }
+
+            .service:last-child {
+                border-bottom: 0;
+            }
+
+            .capabilities {
+                grid-template-columns: 1fr;
+            }
+
+            .capability:nth-child(odd),
+            .capability:nth-child(even) {
+                padding-left: 0;
+                padding-right: 0;
+
+                border-right: 0;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+
+                gap: 55px;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .footer-links {
+                gap: 18px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ============================================================
+     LANGUAGE SWITCHER
+============================================================= -->
+
+<nav class="language-switcher" aria-label="Language">
+
+    <button data-lang="en" class="active">EN</button>
+    <button data-lang="it">IT</button>
+    <button data-lang="fr">FR</button>
+    <button data-lang="uk">UA</button>
+
+</nav>
+
+
+<!-- ============================================================
+     HERO
+============================================================= -->
+
+<header>
+
+    <div class="header-inner">
+
+        <div>
+
+            <div class="eyebrow" data-i18n="eyebrow">
+                Technology · E-Commerce · AI · Automation
+            </div>
+
+            <h1 data-i18n="heroTitle">
+                Technology that<br>
+                <span>moves business forward.</span>
+            </h1>
+
+            <p class="hero-description" data-i18n="heroDescription">
+                Independent technology consulting for companies where
+                digital infrastructure, e-commerce, AI and engineering
+                directly impact the bottom line.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="mailto:mykhailo@korovkin.at"
+                    class="button button-primary"
+                    data-i18n="bookMeeting">
+                    Book a Meeting
+                </a>
+
+                <a
+                    href="#expertise"
+                    class="button button-secondary"
+                    data-i18n="explore">
+                    Explore Expertise
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile">
+
+            <img
+                alt="Mykhailo Korovkin"
+                src="data:image/webp;base64,UklGRlwSAABXRUJQVlA4IFASAABQaACdASrcANwAPnk4l0ikoy"
+            >
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ============================================================
+     MAIN
+============================================================= -->
+
+<main>
+
+
+    <!-- ========================================================
+         EXPERTISE
+    ========================================================= -->
+
+    <section class="section" id="expertise">
+
+        <div class="section-label" data-i18n="expertiseLabel">
+            Expertise
+        </div>
+
+        <h2 class="section-title" data-i18n="expertiseTitle">
+            Senior technology thinking without the corporate machinery.
+        </h2>
+
+        <p class="section-intro" data-i18n="expertiseIntro">
+            Focused consulting for businesses dealing with complex
+            technology, e-commerce, AI, automation and digital
+            transformation challenges.
+        </p>
+
+
+        <div class="services">
+
+
+            <article class="service">
+
+                <div class="service-number">01</div>
+
+                <h3 data-i18n="service1Title">
+                    E-Commerce
+                </h3>
+
+                <p data-i18n="service1Text">
+                    Architecture, platforms, integrations, performance
+                    and operational systems for high-volume commerce.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">02</div>
+
+                <h3 data-i18n="service2Title">
+                    Technology & AI
+                </h3>
+
+                <p data-i18n="service2Text">
+                    Engineering strategy, architecture, AI adoption,
+                    automation and technical decision-making for
+                    growing organizations.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">03</div>
+
+                <h3 data-i18n="service3Title">
+                    Business Processes
+                </h3>
+
+                <p data-i18n="service3Text">
+                    Improving business and development processes by
+                    connecting people, systems, automation and data.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- ====================================================
+             CAPABILITIES
+        ===================================================== -->
+
+        <div class="capabilities">
+
+
+            <div class="capability">
+
+                <h4 data-i18n="capability1Title">
+                    AI & Intelligent Automation
+                </h4>
+
+                <p data-i18n="capability1Text">
+                    Practical AI integration, workflows, agents and
+                    automation where they create measurable value.
+                </p>
+
+            </div>
+
+
+            <div class="capability">
+
+                <h4 data-i18n="capability2Title">
+                    Development Processes
+                </h4>
+
+                <p data-i18n="capability2Text">
+                    Engineering workflows, delivery pipelines,
+                    architecture and team productivity.
+                </p>
+
+            </div>
+
+
+            <div class="capability">
+
+                <h4 data-i18n="capability3Title">
+                    Business Automation
+                </h4>
+
+                <p data-i18n="capability3Text">
+                    Removing repetitive work and connecting fragmented
+                    business systems.
+                </p>
+
+            </div>
+
+
+            <div class="capability">
+
+                <h4 data-i18n="capability4Title">
+                    Technology Architecture
+                </h4>
+
+                <p data-i18n="capability4Text">
+                    Scalable platforms, integrations, infrastructure
+                    and long-term technical strategy.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================================
+         APPROACH
+    ========================================================= -->
+
+    <section class="approach">
+
+        <div class="section">
+
+            <div class="section-label" data-i18n="approachLabel">
+                Approach
+            </div>
+
+            <h2 class="section-title" data-i18n="approachTitle">
+                Built for decisions that matter.
+            </h2>
+
+
+            <div class="approach-grid">
+
+
+                <div>
+
+                    <p class="statement" data-i18n="statement">
+                        No layers of account managers.
+                        No unnecessary presentations.
+                        Just experienced technical thinking
+                        applied directly to the problem.
+                    </p>
+
+                </div>
+
+
+                <div class="details">
+
+
+                    <div class="detail">
+
+                        <strong data-i18n="detail1Title">
+                            Senior involvement
+                        </strong>
+
+                        <span data-i18n="detail1Text">
+                            Direct access to the person doing the work.
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <strong data-i18n="detail2Title">
+                            Business first
+                        </strong>
+
+                        <span data-i18n="detail2Text">
+                            Technology decisions connected to outcomes.
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <strong data-i18n="detail3Title">
+                            Independent
+                        </strong>
+
+                        <span data-i18n="detail3Text">
+                            No platform or vendor agenda.
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <strong data-i18n="detail4Title">
+                            International
+                        </strong>
+
+                        <span data-i18n="detail4Text">
+                            Working with distributed teams and organizations.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================================
+         CTA
+    ========================================================= -->
+
+    <section class="cta">
+
+        <div class="cta-inner">
+
+            <div>
+
+                <h2 data-i18n="ctaTitle">
+                    Have a complex technology problem?
+                </h2>
+
+                <p data-i18n="ctaText">
+                    Let's determine whether I can help.
+                </p>
+
+            </div>
+
+
+            <a
+                href="mailto:mykhailo@korovkin.at"
+                class="button button-primary"
+                data-i18n="ctaButton">
+                Start a Conversation
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-left">
+
+            <div class="footer-name">
+                © 2026 Mykhailo Korovkin
+            </div>
+
+            <div class="footer-vat">
+                IVA: 0000000000000
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a
+                href="https://www.linkedin.com/in/mykhailo-korovkin-57686b47/"
+                target="_blank"
+                rel="noopener">
+                LinkedIn
+            </a>
+
+            <a
+                href="https://github.com/kovitch/"
+                target="_blank"
+                rel="noopener">
+                GitHub
+            </a>
+
+            <a
+                href="https://www.toptal.com/resume/korovkin-mykhailo"
+                target="_blank"
+                rel="noopener">
+                TopTal
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT / TRANSLATIONS
+============================================================= -->
+
+<script>
+
+const translations = {
+
+    en: {
+
+        eyebrow:
+            "Technology · E-Commerce · AI · Automation",
+
+        heroTitle:
+            "Technology that<br><span>moves business forward.</span>",
+
+        heroDescription:
+            "Independent technology consulting for companies where digital infrastructure, e-commerce, AI and engineering directly impact the bottom line.",
+
+        bookMeeting:
+            "Book a Meeting",
+
+        explore:
+            "Explore Expertise",
+
+        expertiseLabel:
+            "Expertise",
+
+        expertiseTitle:
+            "Senior technology thinking without the corporate machinery.",
+
+        expertiseIntro:
+            "Focused consulting for businesses dealing with complex technology, e-commerce, AI, automation and digital transformation challenges.",
+
+        service1Title:
+            "E-Commerce",
+
+        service1Text:
+            "Architecture, platforms, integrations, performance and operational systems for high-volume commerce.",
+
+        service2Title:
+            "Technology & AI",
+
+        service2Text:
+            "Engineering strategy, architecture, AI adoption, automation and technical decision-making for growing organizations.",
+
+        service3Title:
+            "Business Processes",
+
+        service3Text:
+            "Improving business and development processes by connecting people, systems, automation and data.",
+
+        capability1Title:
+            "AI & Intelligent Automation",
+
+        capability1Text:
+            "Practical AI integration, workflows, agents and automation where they create measurable value.",
+
+        capability2Title:
+            "Development Processes",
+
+        capability2Text:
+            "Engineering workflows, delivery pipelines, architecture and team productivity.",
+
+        capability3Title:
+            "Business Automation",
+
+        capability3Text:
+            "Removing repetitive work and connecting fragmented business systems.",
+
+        capability4Title:
+            "Technology Architecture",
+
+        capability4Text:
+            "Scalable platforms, integrations, infrastructure and long-term technical strategy.",
+
+        approachLabel:
+            "Approach",
+
+        approachTitle:
+            "Built for decisions that matter.",
+
+        statement:
+            "No layers of account managers. No unnecessary presentations. Just experienced technical thinking applied directly to the problem.",
+
+        detail1Title:
+            "Senior involvement",
+
+        detail1Text:
+            "Direct access to the person doing the work.",
+
+        detail2Title:
+            "Business first",
+
+        detail2Text:
+            "Technology decisions connected to outcomes.",
+
+        detail3Title:
+            "Independent",
+
+        detail3Text:
+            "No platform or vendor agenda.",
+
+        detail4Title:
+            "International",
+
+        detail4Text:
+            "Working with distributed teams and organizations.",
+
+        ctaTitle:
+            "Have a complex technology problem?",
+
+        ctaText:
+            "Let's determine whether I can help.",
+
+        ctaButton:
+            "Start a Conversation"
+    },
+
+
+    it: {
+
+        eyebrow:
+            "Tecnologia · E-Commerce · AI · Automazione",
+
+        heroTitle:
+            "Tecnologia che<br><span>fa crescere il business.</span>",
+
+        heroDescription:
+            "Consulenza tecnologica indipendente per aziende in cui infrastruttura digitale, e-commerce, AI ed engineering hanno un impatto diretto sui risultati.",
+
+        bookMeeting:
+            "Prenota un incontro",
+
+        explore:
+            "Scopri le competenze",
+
+        expertiseLabel:
+            "Competenze",
+
+        expertiseTitle:
+            "Esperienza tecnologica senior, senza la complessità delle grandi società.",
+
+        expertiseIntro:
+            "Consulenza mirata per aziende che affrontano problemi complessi di tecnologia, e-commerce, AI, automazione e trasformazione digitale.",
+
+        service1Title:
+            "E-Commerce",
+
+        service1Text:
+            "Architettura, piattaforme, integrazioni, performance e sistemi operativi per e-commerce ad alto volume.",
+
+        service2Title:
+            "Tecnologia & AI",
+
+        service2Text:
+            "Strategia engineering, architettura, adozione dell'AI, automazione e decisioni tecniche per organizzazioni in crescita.",
+
+        service3Title:
+            "Processi Aziendali",
+
+        service3Text:
+            "Miglioramento dei processi aziendali e di sviluppo collegando persone, sistemi, automazione e dati.",
+
+        capability1Title:
+            "AI & Automazione Intelligente",
+
+        capability1Text:
+            "Integrazione pratica dell'AI, workflow, agenti e automazione dove possono creare valore misurabile.",
+
+        capability2Title:
+            "Processi di Sviluppo",
+
+        capability2Text:
+            "Workflow engineering, pipeline di delivery, architettura e produttività dei team.",
+
+        capability3Title:
+            "Automazione Aziendale",
+
+        capability3Text:
+            "Eliminazione delle attività ripetitive e connessione dei sistemi aziendali frammentati.",
+
+        capability4Title:
+            "Architettura Tecnologica",
+
+        capability4Text:
+            "Piattaforme scalabili, integrazioni, infrastruttura e strategia tecnologica a lungo termine.",
+
+        approachLabel:
+            "Approccio",
+
+        approachTitle:
+            "Pensato per le decisioni che contano.",
+
+        statement:
+            "Niente account manager intermediari. Niente presentazioni inutili. Solo esperienza tecnica applicata direttamente al problema.",
+
+        detail1Title:
+            "Coinvolgimento senior",
+
+        detail1Text:
+            "Accesso diretto alla persona che svolge il lavoro.",
+
+        detail2Title:
+            "Business first",
+
+        detail2Text:
+            "Decisioni tecnologiche collegate ai risultati.",
+
+        detail3Title:
+            "Indipendente",
+
+        detail3Text:
+            "Nessun interesse legato a piattaforme o fornitori.",
+
+        detail4Title:
+            "Internazionale",
+
+        detail4Text:
+            "Collaborazione con team e organizzazioni internazionali.",
+
+        ctaTitle:
+            "Hai un problema tecnologico complesso?",
+
+        ctaText:
+            "Vediamo insieme se posso aiutarti.",
+
+        ctaButton:
+            "Inizia una conversazione"
+    },
+
+
+    fr: {
+
+        eyebrow:
+            "Technologie · E-Commerce · IA · Automatisation",
+
+        heroTitle:
+            "La technologie qui<br><span>fait avancer votre entreprise.</span>",
+
+        heroDescription:
+            "Conseil technologique indépendant pour les entreprises où l'infrastructure numérique, l'e-commerce, l'IA et l'ingénierie ont un impact direct sur les résultats.",
+
+        bookMeeting:
+            "Prendre rendez-vous",
+
+        explore:
+            "Découvrir l'expertise",
+
+        expertiseLabel:
+            "Expertise",
+
+        expertiseTitle:
+            "Une expertise technologique senior, sans la complexité des grandes structures.",
+
+        expertiseIntro:
+            "Un conseil ciblé pour les entreprises confrontées à des défis complexes en technologie, e-commerce, IA, automatisation et transformation digitale.",
+
+        service1Title:
+            "E-Commerce",
+
+        service1Text:
+            "Architecture, plateformes, intégrations, performance et systèmes opérationnels pour le commerce à grande échelle.",
+
+        service2Title:
+            "Technologie & IA",
+
+        service2Text:
+            "Stratégie engineering, architecture, adoption de l'IA, automatisation et décisions techniques pour les organisations en croissance.",
+
+        service3Title:
+            "Processus Business",
+
+        service3Text:
+            "Amélioration des processus métier et de développement en connectant personnes, systèmes, automatisation et données.",
+
+        capability1Title:
+            "IA & Automatisation Intelligente",
+
+        capability1Text:
+            "Intégration pratique de l'IA, workflows, agents et automatisation là où ils créent une valeur mesurable.",
+
+        capability2Title:
+            "Processus de Développement",
+
+        capability2Text:
+            "Workflows engineering, pipelines de livraison, architecture et productivité des équipes.",
+
+        capability3Title:
+            "Automatisation Business",
+
+        capability3Text:
+            "Réduction des tâches répétitives et connexion des systèmes métier fragmentés.",
+
+        capability4Title:
+            "Architecture Technologique",
+
+        capability4Text:
+            "Plateformes évolutives, intégrations, infrastructure et stratégie technologique à long terme.",
+
+        approachLabel:
+            "Approche",
+
+        approachTitle:
+            "Conçu pour les décisions qui comptent.",
+
+        statement:
+            "Pas de couches d'intermédiaires. Pas de présentations inutiles. Une expertise technique appliquée directement au problème.",
+
+        detail1Title:
+            "Implication senior",
+
+        detail1Text:
+            "Accès direct à la personne qui réalise le travail.",
+
+        detail2Title:
+            "Business first",
+
+        detail2Text:
+            "Des décisions technologiques liées aux résultats.",
+
+        detail3Title:
+            "Indépendant",
+
+        detail3Text:
+            "Aucun intérêt lié à une plateforme ou un fournisseur.",
+
+        detail4Title:
+            "International",
+
+        detail4Text:
+            "Collaboration avec des équipes et organisations internationales.",
+
+        ctaTitle:
+            "Vous avez un problème technologique complexe ?",
+
+        ctaText:
+            "Voyons ensemble si je peux vous aider.",
+
+        ctaButton:
+            "Démarrer une conversation"
+    },
+
+
+    uk: {
+
+        eyebrow:
+            "Технології · E-Commerce · AI · Автоматизація",
+
+        heroTitle:
+            "Технології, які<br><span>рухають бізнес уперед.</span>",
+
+        heroDescription:
+            "Незалежний технологічний консалтинг для компаній, де цифрова інфраструктура, e-commerce, AI та engineering безпосередньо впливають на результат.",
+
+        bookMeeting:
+            "Запланувати зустріч",
+
+        explore:
+            "Наші компетенції",
+
+        expertiseLabel:
+            "Компетенції",
+
+        expertiseTitle:
+            "Senior-рівень технологічної експертизи без корпоративної бюрократії.",
+
+        expertiseIntro:
+            "Фокусований консалтинг для бізнесу зі складними технологічними, e-commerce, AI, automation та digital-задачами.",
+
+        service1Title:
+            "E-Commerce",
+
+        service1Text:
+            "Архітектура, платформи, інтеграції, продуктивність та операційні системи для масштабного e-commerce.",
+
+        service2Title:
+            "Технології & AI",
+
+        service2Text:
+            "Engineering-стратегія, архітектура, впровадження AI, автоматизація та технічні рішення для компаній, що розвиваються.",
+
+        service3Title:
+            "Бізнес-процеси",
+
+        service3Text:
+            "Покращення бізнес- та development-процесів через поєднання людей, систем, автоматизації та даних.",
+
+        capability1Title:
+            "AI & Інтелектуальна автоматизація",
+
+        capability1Text:
+            "Практичне впровадження AI, workflow, агентів та автоматизації там, де вони створюють вимірювану цінність.",
+
+        capability2Title:
+            "Процеси розробки",
+
+        capability2Text:
+            "Engineering workflow, delivery pipelines, архітектура та продуктивність команд.",
+
+        capability3Title:
+            "Автоматизація бізнесу",
+
+        capability3Text:
+            "Усунення повторюваної роботи та інтеграція розрізнених бізнес-систем.",
+
+        capability4Title:
+            "Технологічна архітектура",
+
+        capability4Text:
+            "Масштабовані платформи, інтеграції, інфраструктура та довгострокова технологічна стратегія.",
+
+        approachLabel:
+            "Підхід",
+
+        approachTitle:
+            "Для рішень, які справді мають значення.",
+
+        statement:
+            "Без зайвих account manager. Без непотрібних презентацій. Лише досвід і технічна експертиза, застосовані безпосередньо до проблеми.",
+
+        detail1Title:
+            "Senior involvement",
+
+        detail1Text:
+            "Безпосередній доступ до спеціаліста, який виконує роботу.",
+
+        detail2Title:
+            "Business first",
+
+        detail2Text:
+            "Технологічні рішення пов'язані з бізнес-результатом.",
+
+        detail3Title:
+            "Незалежність",
+
+        detail3Text:
+            "Жодної прив'язки до конкретної платформи чи постачальника.",
+
+        detail4Title:
+            "International",
+
+        detail4Text:
+            "Робота з міжнародними командами та організаціями.",
+
+        ctaTitle:
+            "Маєте складну технологічну проблему?",
+
+        ctaText:
+            "Давайте визначимо, чи можу я допомогти.",
+
+        ctaButton:
+            "Почати розмову"
+    }
+
+};
+
+
+/* =========================================================
+   LANGUAGE SWITCHING
+========================================================= */
+
+function setLanguage(lang) {
+
+    const dictionary = translations[lang];
+
+    if (!dictionary) {
+        return;
+    }
+
+    document.documentElement.lang = lang;
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            const key = element.dataset.i18n;
+
+            if (dictionary[key]) {
+                element.innerHTML = dictionary[key];
+            }
+
+        });
+
+
+    document
+        .querySelectorAll(".language-switcher button")
+        .forEach(button => {
+
+            button.classList.toggle(
+                "active",
+                button.dataset.lang === lang
+            );
+
+        });
+
+
+    localStorage.setItem(
+        "preferredLanguage",
+        lang
+    );
+}
+
+
+/* =========================================================
+   BUTTON EVENTS
+========================================================= */
+
+document
+    .querySelectorAll(".language-switcher button")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => setLanguage(button.dataset.lang)
+        );
+
+    });
+
+
+/* =========================================================
+   INITIAL LANGUAGE
+========================================================= */
+
+const savedLanguage =
+    localStorage.getItem("preferredLanguage");
+
+const browserLanguage =
+    navigator.language
+        ? navigator.language.substring(0, 2)
+        : "en";
+
+const initialLanguage =
+    savedLanguage ||
+    (
+        translations[browserLanguage]
+            ? browserLanguage
+            : "en"
+    );
+
+setLanguage(initialLanguage);
+
+</script>
+
+</body>
+</html>
